@@ -173,34 +173,33 @@ function Platform(x, y, width, height) {
       ]
     },
     {
-        backgroundImage:"savacentar.jpg",
-        brojrecenica: 4,
-        story:["Dva sata kasnije...",
-          "Petra: To je bila dosadna vožnja sa Madjarima... Još su me ostavili kod Sava Centra :/",
-          "Petra: Sada ću morati da uhvatim 95-icu do Karaburme (JUPII)",
+        backgroundImage:"kara.jpg",
+        brojrecenica: 5,
+        story:["Petra: Konačno izazak iz onog busa!",
+          "Petra: Sada konačno da iznenadim Vuka :3",
+          "*lift ne radi*",
+          "Petra: DA LI JE MOGUĆE DA ĆU MORATI DA SE PENJEM? (popizdela)",
           "Ne znam "
         ],
         enemies:[],
         
       platforms: [
-  new Platform(120, 500, 60, 20),
-  new Platform(70, 400, 50, 20),
-  new Platform(230, 320, 40, 20),
-  new Platform(310, 400, 50, 20),
-  new Platform(450, 360, 60, 20),
-  new Platform(620, 340, 40, 20),
-  new Platform(540, 270, 50, 20),
-  new Platform(530, 170, 40, 20),
-  new Platform(840, 270, 60, 20),
-  new Platform(70, 100, 50, 20),
-  new Platform(150, 160, 40, 20),
-  new Platform(240, 120, 30, 20),
-  new Platform(410, 90, 30, 20)
+  new Platform(850, 500, 30, 20),
+  new Platform(900, 400, 30, 20),
+  new Platform(850, 300, 30, 20),
+  new Platform(900, 200, 30, 20),
+  new Platform(850, 100, 30, 20),
+  new Platform(300, 400, 30, 20),
+  new Platform(250, 300, 30, 20),
+  new Platform(300, 200, 30, 20),
+  new Platform(250, 100, 30, 20),
+  new Platform(500, 460, 70, 20),
+  new Platform(70, 100, 60, 20)
 ]
 
     }
   ];
-  let currentLevel = 2;
+  let currentLevel = 0;
   
 let currentPlatforms = levels[currentLevel].platforms;
 let currentEnemies = levels[currentLevel].enemies || [];
@@ -247,8 +246,8 @@ for (let i = 0; i < levels.length; i++) {
 function clear() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-showStory=false;
-recenica = 10;
+//showStory=false;
+//recenica = 10;
 function update() {
 if (showStory||recenica+1<levels[currentLevel].brojrecenica) {
   showStory=true;
