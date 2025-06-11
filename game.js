@@ -246,8 +246,8 @@ for (let i = 0; i < levels.length; i++) {
 function clear() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-//showStory=false;
-//recenica = 10;
+showStory=false;
+recenica = 10;
 function update() {
 if (showStory||recenica+1<levels[currentLevel].brojrecenica) {
   showStory=true;
