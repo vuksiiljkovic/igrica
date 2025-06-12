@@ -52,7 +52,7 @@ Enemy.prototype.update = function() {
   }
 };
 const enemyImage = new Image();
-enemyImage.src = "baba.png"; // Replace with your PNG file
+enemyImage.src = "baba.PNG"; // Replace with your PNG file
 
 Enemy.prototype.draw = function(ctx) {
   ctx.drawImage(enemyImage,this.x, this.y, this.width, this.height);
@@ -91,7 +91,7 @@ function Platform(x, y, width, height) {
   
   const levels = [
     {
-        backgroundImage:"slika3.jpg",
+        backgroundImage:"slika3.JPG",
         brojrecenica: 9,
         story : ["Zdravo Petra! Dobro došla u igricu: Put do Vuka!",
           "Nadam se da ćeš preći sve nivoe i da ćeš se zabaviti!",
@@ -173,7 +173,7 @@ function Platform(x, y, width, height) {
       ]
     },
     {
-        backgroundImage:"kara.jpg",
+        backgroundImage:"kara.JPG",
         brojrecenica: 5,
         story:["Petra: Konačno izazak iz onog busa!",
           "Petra: Sada konačno da iznenadim Vuka :3",
