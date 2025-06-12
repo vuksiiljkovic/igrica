@@ -197,6 +197,131 @@ function Platform(x, y, width, height) {
   new Platform(70, 100, 60, 20)
 ]
 
+    },
+    {
+        backgroundImage:"prokop.jpg",
+        brojrecenica: 24,
+        story:["Petra: Uh, konačno sam se popela, nikad više sigurno...",
+          "Petra: A sada iznenadjenje :3",
+          "*Kuca*",
+          "*Ništa*",
+          "*Ponovo kuca*",
+          "*Ponovo ništa*",
+          "Da li je moguće da nije tu :((((",
+          "*Neko prolazi kroz hodnik*",
+          "Lazar: E ćao Petra! (sa užasnim naglaskom)",
+          "Petra: Ćao, gde je..? (zbunjeno)",
+          "Lazar: Vuk je upravo otišao na voz kući, zar ti nije javio?",
+          "Petra: (Ubiću se) Nisam gledala telefon (jebene babe) :(",
+          "Lazar: Pa možda imaš još vremena da ga stigneš na Prokopu",
+          "Petra: Ali voz samo što nije pošao.... ",
+          "Lazar: Ne brini, iskoristiću Palančansku magiju da te teleportujem tamo",
+          "Petra: ??????",
+          "*Lazar otvara portal*",
+          "Petra: (Koji kurac?????) Hvala valjda? Ćao!! (Ulazi u portal)",
+          "*Prokop*",
+          "Petra: A daj otišao je voz :( Barem ima ovaj sledeći koji je odmah posle",
+          "Petra: Izgleda da će iznenadjenje biti u Užicu",
+          "Petra: Sledeći izazov: preživeti Srbijavoz (kreće prema peronu)",
+          "*do perona i na peronu je ogromna gužva i - oh ne - penzioneri*",
+
+          
+          "Ne znam "
+        ],
+        enemies:[
+        new Enemy(200, 340, 60, 60, 190,2.5),
+        new Enemy(550, 340, 60, 60, 190,3),
+        new Enemy(200, 140, 60, 60, 190,2.7),
+        new Enemy(550, 140, 60, 60, 190,2),
+        ],
+        
+      platforms: [
+  new Platform(100, 500, 70, 20),
+  new Platform(200, 400, 250, 20),
+  new Platform(550, 400, 250, 20),
+  new Platform(880, 300, 70, 20),
+  new Platform(200, 200, 250, 20),
+  new Platform(550, 200, 250, 20),
+
+  
+  new Platform(70, 100, 60, 20)
+]
+
+    },
+    {
+        backgroundImage:"suma.PNG",
+        brojrecenica: 5,
+        story:["Petra: Uh nekako sam se progurala u voz ali i ovde je jednaka guzva :/",
+          "Petra: Barem sam sela i sad samo treba da sačekam da dodjemo u Užice",
+          "Petra: Umorila sam se od jurnjave ceo dan (zeva)",
+          "Petra: Možda malo preklopim (zatvara oči)",
+          "*neko vreme je prošlo*",
+          "*BOOM*",
+          "Petra: (budi se) Šta se???",
+          "Neko: Čuknuli smo se sa vozom ispred i svi su popadali po okolnjoj šumi!",
+          "Petra: Oh ne VUK!!!!",
+          "Petra: (izlazi iz voza) Moram da ga pronadjem!!!",
+
+          "Ne znam "
+        ],
+        enemies:[],
+        
+      platforms: [
+  new Platform(100, 300, 30, 20),
+  new Platform(300, 300, 30, 20),
+  new Platform(500, 300, 30, 20),
+  new Platform(700, 300, 30, 20),
+  new Platform(900, 300, 30, 20),
+
+  new Platform(900, 550, 30, 20),
+  
+
+  new Platform(100, 450, 30, 20),
+  new Platform(300, 450, 30, 20),
+  new Platform(500, 450, 30, 20),
+  new Platform(700, 450, 30, 20),
+  new Platform(900, 450, 30, 20),
+
+  new Platform(900, 240, 30, 20),
+  new Platform(100, 380, 30, 20),
+
+  new Platform(100, 150, 30, 20),
+  new Platform(300, 150, 30, 20),
+  new Platform(500, 150, 30, 20),
+  new Platform(700, 150, 30, 20),
+  new Platform(900, 150, 30, 20),
+
+
+
+  
+  new Platform(70, 100, 60, 20)
+]
+
+    },
+    {
+        backgroundImage:"kraj.png",
+        brojrecenica: 5,
+        story:["Vuk: PETRA DA LI JE MOGUĆE DA SI TI?? (leži povredjen,deo voza mu je preko noge)",
+          "Petra: Ne mrdaj sad ću ti pomoćiii!!!!",
+          "*spase ga*",
+          "Vuk: Otkud ti ovde šta se dešava (još u šoku zbog nesreće i petre)",
+          "Petra: Sad ću ti reći ali prvo... (poljubi ga)",
+          "Vuk: (zacrveneo se, presrećan)",
+          "Petra: Krenula sam da te iznenadim ali onda...",
+          "*jedna priča kasnije*",
+          "Vuk: Ne mogu da verujem!",
+          "Vuk: Ti si najbolja devojka na svetu! Kako sam srećan da me neko tako prelep spase :3",
+          "Petra: :3",
+          "Vuk: Šta sada?",
+          "Petra: Ne znam, videćemo gde nas ponese dalje ova avantura...",
+          "Petra: Do tada uživamo ;)",
+        ],
+        enemies:[],
+        
+      platforms: [
+  
+]
+
     }
   ];
   let currentLevel = 0;
@@ -246,8 +371,8 @@ for (let i = 0; i < levels.length; i++) {
 function clear() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-showStory=false;
-recenica = 10;
+//showStory=false;
+//recenica = 30;
 function update() {
 if (showStory||recenica+1<levels[currentLevel].brojrecenica) {
   showStory=true;
