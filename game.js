@@ -199,7 +199,7 @@ function Platform(x, y, width, height) {
 
     },
     {
-        backgroundImage:"prokop.JPG",
+        backgroundImage:"prokop.jpg",
         brojrecenica: 24,
         story:["Petra: Uh, konačno sam se popela, nikad više sigurno...",
           "Petra: A sada iznenadjenje :3",
@@ -299,7 +299,7 @@ function Platform(x, y, width, height) {
 
     },
     {
-        backgroundImage:"kraj.PNG",
+        backgroundImage:"kraj.png",
         brojrecenica: 5,
         story:["Vuk: PETRA DA LI JE MOGUĆE DA SI TI?? (leži povredjen,deo voza mu je preko noge)",
           "Petra: Ne mrdaj sad ću ti pomoćiii!!!!",
