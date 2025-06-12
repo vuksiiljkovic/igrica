@@ -11,6 +11,10 @@ let displayedText = "";
 let storyCharIndex = 0;
 let typingDone = false;
 
+const bgMusic = new Audio("muzikica.mp3");
+bgMusic.loop = true;
+bgMusic.volume = 0.5; // adjust volume (0.0 to 1.0)
+
 
 let recenica =0;
 
@@ -199,7 +203,7 @@ function Platform(x, y, width, height) {
 
     },
     {
-        backgroundImage:"prokop.jpg",
+        backgroundImage:"prokop.JPG",
         brojrecenica: 24,
         story:["Petra: Uh, konačno sam se popela, nikad više sigurno...",
           "Petra: A sada iznenadjenje :3",
@@ -299,8 +303,8 @@ function Platform(x, y, width, height) {
 
     },
     {
-        backgroundImage:"kraj.png",
-        brojrecenica: 15,
+        backgroundImage:"kraj.PNG",
+        brojrecenica: 5,
         story:["Vuk: PETRA DA LI JE MOGUĆE DA SI TI?? (leži povredjen,deo voza mu je preko noge)",
           "Petra: Ne mrdaj sad ću ti pomoćiii!!!!",
           "*spase ga*",
@@ -315,7 +319,6 @@ function Platform(x, y, width, height) {
           "Vuk: Šta sada?",
           "Petra: Ne znam, videćemo gde nas ponese dalje ova avantura...",
           "Petra: Do tada uživamo ;)",
-               " "
         ],
         enemies:[],
         
@@ -540,8 +543,13 @@ function jump() {
   }
 }
 
-
+let musicStarted=false;
 function keyDown(e) {
+  if (!musicStarted) {
+    bgMusic.play().catch(err => console.warn("Music play error:", err));
+    musicStarted = true;
+  }
+
     if (showStory && e.key === "Enter" && typingDone ) {
     showStory=false;
     displayedText = "";
