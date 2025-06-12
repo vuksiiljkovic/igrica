@@ -300,7 +300,7 @@ function Platform(x, y, width, height) {
     },
     {
         backgroundImage:"kraj.png",
-        brojrecenica: 5,
+        brojrecenica: 15,
         story:["Vuk: PETRA DA LI JE MOGUĆE DA SI TI?? (leži povredjen,deo voza mu je preko noge)",
           "Petra: Ne mrdaj sad ću ti pomoćiii!!!!",
           "*spase ga*",
@@ -315,6 +315,7 @@ function Platform(x, y, width, height) {
           "Vuk: Šta sada?",
           "Petra: Ne znam, videćemo gde nas ponese dalje ova avantura...",
           "Petra: Do tada uživamo ;)",
+               " "
         ],
         enemies:[],
         
@@ -505,7 +506,7 @@ currentEnemies.forEach(enemy => {
   // Collision detection
   if (
     player.x < enemy.x + enemy.width &&
-    player.x + player.width > enemy.x &&
+    player.x + player.width-10 > enemy.x &&
     player.y+60 < enemy.y + enemy.height &&
     player.y + player.height > enemy.y
   ) {
